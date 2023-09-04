@@ -5,7 +5,14 @@
 }
 
 body {
-  background: #181f2a;
+  background: #1c2431;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 ul {
@@ -55,7 +62,7 @@ ul {
   line-height: 30px;
 }
 .getStarted__btn {
-  padding: 1rem 4rem;
+  padding: 1rem 5rem;
   cursor: pointer;
   background: linear-gradient(90deg, #65e2d9, transparent), #339ecc;
   color: white;
@@ -65,4 +72,43 @@ ul {
   outline: none;
   border: none;
   border-radius: 40px;
+}
+
+.waveBg {
+  background-image: url(/images/bg-curvy-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* display: block; */
+  height: 46vh;
+  margin-top: -13rem;
+}
+
+.features {
+  background: #181f2a;
+  position: relative;
+  padding-bottom: 3rem;
+}
+.features__gridWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  gap: 3rem;
+  font-family: "Raleway", sans-serif;
+  padding: 0 5rem;
+}
+.features__gridElement {
+  text-align: center;
+}
+.features__gridImg {
+  margin-bottom: 1.25rem;
+}
+.features__title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.features__desc {
+  font-size: 0.938rem;
+  margin-bottom: 1rem;
+  line-height: 20px;
 }

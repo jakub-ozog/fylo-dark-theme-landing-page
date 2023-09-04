@@ -21,9 +21,17 @@ $OpenSans: "Open Sans", sans-serif;
 }
 
 body {
-  background: $DarkBlue2;
+  background: $DarkBlue1;
+  overflow-x: hidden;
 }
 
+
+.container { 
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+   
+}
 ul {
   list-style-type: none;
   padding: 0;
@@ -78,7 +86,7 @@ ul {
 
   &__btn {
 
-    padding: 1rem 4rem;
+    padding: 1rem 5rem;
     cursor: pointer;
     background: linear-gradient(90deg, $Cyan, transparent), $Blue;
     color: $White;
@@ -89,4 +97,49 @@ ul {
     border: none;
     border-radius: 40px;
   }
+}
+.waveBg {
+    background-image: url(/images/bg-curvy-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    /* display: block; */
+    height: 46vh;
+    margin-top: -13rem;
+
+}
+.features {
+    background:$DarkBlue2;
+    position: relative;
+    padding-bottom: 3rem;
+
+    
+
+    &__gridWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: $White;
+        gap: 3rem;
+        font-family: $Raleway;
+        padding: 0 5rem;
+    }
+
+    &__gridElement {
+        text-align: center;
+    }
+
+    &__gridImg {
+        margin-bottom: 1.25rem;
+    }
+
+    &__title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    &__desc {
+        font-size: .938rem;
+        margin-bottom: 1rem;
+        line-height: 20px;
+    }
 }
