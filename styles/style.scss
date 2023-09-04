@@ -1,0 +1,92 @@
+//Colors
+$DarkBlue1: hsl(217, 28%, 15%);
+$DarkBlue2: hsl(218, 28%, 13%);
+$DarkBlue3: hsl(216, 53%, 9%);
+$DarkBlue4: hsl(219, 30%, 18%);
+
+$Cyan: hsl(176, 68%, 64%);
+$Blue: hsl(198, 60%, 50%);
+$LightRed: hsl(0, 100%, 63%);
+
+$White: hsl(0, 0%, 100%);
+
+//Fonts
+$Raleway: "Raleway", sans-serif;
+$OpenSans: "Open Sans", sans-serif;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $DarkBlue2;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primaryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 4rem;
+}
+
+.primaryNav {
+  &__tabs {
+    display: flex;
+    color: $White;
+    font-family: $Raleway;
+    font-weight: 400;
+    gap: 3rem;
+  }
+}
+
+.getStarted {
+  margin: 0 auto;
+  text-align: center;
+  font-family: $Raleway;
+  color: $White;
+  padding: 0rem 2.5rem;
+  
+  &__heroImg {
+    margin-bottom: 4rem;
+
+    img {
+        max-width: 570px;
+        width: 100%;
+    }
+  }
+  
+  &__title {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    line-height: 30px;
+  }
+
+  &__btn {
+
+    padding: 1rem 4rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, $Cyan, transparent), $Blue;
+    color: $White;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: $Raleway;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+  }
+}
