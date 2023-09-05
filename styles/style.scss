@@ -25,12 +25,10 @@ body {
   overflow-x: hidden;
 }
 
-
-.container { 
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
-   
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 ul {
   list-style-type: none;
@@ -61,16 +59,16 @@ ul {
   font-family: $Raleway;
   color: $White;
   padding: 0rem 2.5rem;
-  
+
   &__heroImg {
     margin-bottom: 4rem;
 
     img {
-        max-width: 570px;
-        width: 100%;
+      max-width: 570px;
+      width: 100%;
     }
   }
-  
+
   &__title {
     font-size: 2.75rem;
     font-weight: 700;
@@ -85,7 +83,6 @@ ul {
   }
 
   &__btn {
-
     padding: 1rem 5rem;
     cursor: pointer;
     background: linear-gradient(90deg, $Cyan, transparent), $Blue;
@@ -99,47 +96,99 @@ ul {
   }
 }
 .waveBg {
-    background-image: url(/images/bg-curvy-desktop.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    /* display: block; */
-    height: 46vh;
-    margin-top: -13rem;
-
+  background-image: url(/images/bg-curvy-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* display: block; */
+  height: 46vh;
+  margin-top: -13rem;
 }
 .features {
-    background:$DarkBlue2;
+  background: $DarkBlue2;
+  position: relative;
+  padding-bottom: 3rem;
+
+  &__gridWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: $White;
+    gap: 3rem;
+    font-family: $Raleway;
+    padding: 0 5rem;
+  }
+
+  &__gridElement {
+    text-align: center;
+  }
+
+  &__gridImg {
+    margin-bottom: 1.25rem;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__desc {
+    font-size: 0.938rem;
+    margin-bottom: 1rem;
+    line-height: 20px;
+  }
+}
+
+.stayProductive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 4rem;
+  gap: 2rem;
+  color: $White;
+  font-family: $Raleway;
+ 
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 50px;
+  }
+
+  &__desc {
+    line-height:25px;
+    margin-bottom: 1rem;;
+  }
+
+  &__btnWrapper {
     position: relative;
-    padding-bottom: 3rem;
+    width: 100%;
+    max-width: 165px;
 
+    &::after {
+      content: '';
+      position: absolute;
+      width: 95%;
+      height: 1px;
+      background: $Cyan;
+      margin-top: .5rem;
+     }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: none;
+    border: none; 
     
-
-    &__gridWrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        color: $White;
-        gap: 3rem;
-        font-family: $Raleway;
-        padding: 0 5rem;
-    }
-
-    &__gridElement {
-        text-align: center;
-    }
-
-    &__gridImg {
-        margin-bottom: 1.25rem;
-    }
-
-    &__title {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-    }
-
-    &__desc {
-        font-size: .938rem;
-        margin-bottom: 1rem;
-        line-height: 20px;
-    }
+    color: $Cyan;
+    font-family: $Raleway;
+    font-size: 1rem;
+   
+    
+    // span, img {
+    //   text-decoration: underline;
+    //   text-underline-offset: 5px;
+    // }
+  }
 }
