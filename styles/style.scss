@@ -9,6 +9,7 @@ $Blue: hsl(198, 60%, 50%);
 $LightRed: hsl(0, 100%, 63%);
 
 $White: hsl(0, 0%, 100%);
+$LightGrey: #9f9f9f;
 
 //Fonts
 $Raleway: "Raleway", sans-serif;
@@ -178,6 +179,7 @@ ul {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    cursor: pointer;
     background: none;
     border: none;
     margin-top: 2rem;
@@ -198,6 +200,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    isolation: isolate;
   }
 
   &__card {
@@ -207,7 +210,21 @@ ul {
     background: $DarkBlue1;
     font-size: 0.938rem;
     line-height: 25px;
+    border-radius: 10px;
+    
+    &:nth-child(1) {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: url("/images/bg-quotes.png");
+       inset: -3.25rem -1rem;
+        font-size: 10rem;
+        z-index: -1;
+      }
+    }
   }
+
+ 
 
   &__desc {
     margin-bottom: 1.5rem;
@@ -215,8 +232,9 @@ ul {
 
   &__author {
     display: flex;
-    gap: 1rem;
-    
+    gap: .5rem;
+    align-items: center;
+
     img {
       width: 100%;
       max-width: 30px;
@@ -226,15 +244,118 @@ ul {
   }
 
   &__authorDetails {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    line-height: 10px;
     p {
       color: $White;
-      line-height: 5px;
+      // line-height: 5px;
       font-weight: 700;
-      font-size: .75rem;
+      font-size: 0.75rem;
     }
 
     span {
-      font-size: .5rem;
+      font-size: 0.5rem;
     }
   }
+}
+
+.access {
+  background: $DarkBlue2;
+  padding: 4rem 0;
+  color: $White;
+  font-family: $Raleway;
+  
+  &__wrapper {
+    text-align: center;
+    background: $DarkBlue1;
+    padding: 2rem 3rem;
+    margin: 0 auto;
+    width: clamp(30em, 70%, 900px);
+    border-radius: 15px;
+    box-shadow: 6px 10px 14px 0px hsla(0, 0%, 0%, 0.28);
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  &__desc {
+    font-size: .75rem;
+    line-height: 20px;
+  }
+
+  &__form {
+    margin-top: 2rem;
+    width: 100%;
+
+    input {
+      width: 100%;
+      padding: 1rem 1rem;
+      border-radius: 30px;
+      outline: none;
+      border: none;
+
+      &::placeholder {
+        color: $LightGrey;
+      }
+    }
+  }
+
+  &__btn {
+    // margin-top: 2rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #65e2d9, transparent), #339ecc;
+    color: white;
+    font-size: .75rem;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    max-width: 210px;
+    width: 100%;
+    
+  }
+
+  &__inputWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    // align-items: center;
+
+    div:nth-child(1) {
+      width: 70%;
+    }
+  }
+}
+
+.footer {
+  background: $DarkBlue3;
+  padding: 2rem 3rem;
+  color: $White;
+  font-family: $Raleway;
+
+  &__locationWrapper {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__location {
+    width: 20px;
+    height: 100%;
+  }
+
+
+  &__contactWrapper {
+    a {
+      text-decoration: none;
+      color: $White;
+    }
+  }
+
+
 }
